@@ -25,3 +25,22 @@ for i in range(len(parancsok)):
 
 
 print(f'E:{Edb}, D:{Ddb}, K:{Kdb}, N:{Ndb}')
+
+if Ndb > Kdb:
+    Ndb -= Kdb
+    for i in range(Ndb):
+        print('N', end='')
+else:
+    Kdb -= Ndb
+    for i in range(Ddb):
+        print('K', end='')
+
+if Edb > Ddb:
+    Edb -= Ddb
+    for i in range(Edb):
+        print('E', end='')
+else:
+    Ddb -= Edb
+    for i in range(Kdb):
+        print('K', end='')
+
