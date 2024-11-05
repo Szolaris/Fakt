@@ -1,0 +1,15 @@
+tajszam = input("Kérem a TAJ-számot: ")
+
+
+ellenorzoszam = int(tajszam[8])
+print(f"Az ellenőrzőszámjegy: {ellenorzoszam}")
+
+
+osszeg = 0
+for i in range(8):
+    if i % 2 == 0:
+        osszeg += int(tajszam[i]) * 7
+    else:
+        osszeg += int(tajszam[i]) * 3
+
+print(f'A szorzatok összege: {osszeg}')
