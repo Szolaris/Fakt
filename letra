@@ -3,3 +3,12 @@ dobasok = []
 
 dobasok =(map(int, input().split(", ")))
 print(dobasok)
+
+osszeg = 0
+for i in range(len(dobasok)):
+    osszeg+=dobasok[i]
+    if osszeg % 10 == 0:
+        osszeg -= 3
+        db += 1
+    print(osszeg, end='')
+print(db)
