@@ -1,0 +1,18 @@
+lista = []
+
+with open('adatok (2).txt' , encoding='utf-8') as forrásfájl:
+          for sor in forrásfájl:
+                  sor = sor.strip()
+
+                  if sor:
+                          lista.append(int(sor))
+print(lista)
+
+for i in range(len(lista)):
+        lista[i] *= 2
+
+with open('kimeneti_adatok.txt', 'w' , encoding='utf-8') as célfájl:
+        for i in range(len(lista)):
+                print(lista[i], end=";", file=célfájl)
+                if (i+1) % 10 == 0:
+                        print(file=célfájl)
